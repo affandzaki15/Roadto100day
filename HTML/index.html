@@ -1,14 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Website</title>
+    <title>Single Page CV</title>
+    <style>
+        body {
+            margin: 60px;
+        }
+
+       h2, .job-title {
+            color: rgba(11, 130, 17, 0.533);
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .information {
+            line-height: 1px;
+        }
+
+        .info {
+            color: rgb(6, 112, 179);
+            font-size: 20px;
+            padding-top: 15px;
+        }
+
+        .line {
+            border: 2px solid black;
+        }
+        .skills{
+            margin-top: 50px;
+            line-height: 10px;
+        }
+        .education{
+             margin-top: 50px;
+            line-height: 5px; 
+        }
+        .experience{
+            margin-top: 50px;
+            line-height: 8px;
+        }
+        .list{
+            line-height: 20px;
+        }
+        .internet{
+            margin-top: 30px;
+            line-height: 10px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Halo, Saya Affan</h1>
-    <p> Hello World </p>
-    <a href="https://google.com">Google</a>
-    <img src="../Images/gambar.png" alt="Foto Profil">
+    <hr class="line">
+
+    <h1>Affan Dzaki Abrar</h1>
+    <p class="job-title">Junior Frontend Developer</p>
+
+    <section class="information">
+        <p>87 Tanimbar Tenggara</p>
+        <p>Jakarta, 67479</p>
+        <p>(123) 6839-029</p>
+        <p>aff87@gmail.com</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <p>HTML, CSS, JavaScript, Node JS, React JS</p>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <p class="info">State university of malang, Malang - Bachelor</p>
+        <p>June 2022 to June 2026</p>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        <p class="info">Sco tech, Malang - Frontend Dev</p>
+        <p>June 2025 to Jan 2026</p>
+        <ul class="list">
+            <li>Create website education</li>
+            <li>Create database</li>
+        </ul>
+    </section>
+
+    <section class="internet">
+        <h2>Across the Internet</h2>
+        <p>linkedin.com/affandzaki15</p>
+    </section>
+
 </body>
+
 </html>
