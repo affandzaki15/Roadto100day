@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Website - Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        .list-nav {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .profile {
+            display: flex;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .profile p {
+            margin: 10px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .list-nav span {
+            margin-left: 15px;
+        }
+
+        /* title */
+        .title {
+            margin-top: 50px;
+        }
+
+        .title h1 {
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            margin-top: 0px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        td {
+            border: 1px solid #000;
+        }
+
+        .projects {
+            vertical-align: top;
+        }
+
+         .reviewer {
+            display: flex;
+            gap: 30px;
+        }
+
+        .fill {
+            border: 2px solid #000;
+            border-radius: 30px;
+            padding-bottom: 30px;
+
+        }
+
+        .fill p {
+            color: #8e8b8b;
+            padding-left: 40px;
+            height: 3px;
+
+        }
+        .footer{
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        @media screen and (max-width:600px) {
+            .navigation {
+                width: 100%;
+            }
+
+            .profile {
+                gap: 5%;
+            }
+
+            .profile img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .profile p {
+                margin: 0;
+                font-size: 12px;
+            }
+
+            .list-nav {
+                gap: 10px;
+                font-size: 12px;
+            }
+
+            .list-nav span {
+                margin-left: 10px;
+            }
+
+            .reviewer {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 30px;
+                gap: 10px;
+            }
+
+            .fill {
+                font-size: 14px;
+            }
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="profile">
+            <img src="../Images/gambar.png" alt="profile">
+            <p>Affan Dzaki Abrar</p>
+        </div>
+        <ul class="list-nav">
+            <li>Home<span>/</span></li>
+            <li>Projects<span>/</span></li>
+            <li>Articles<span>/</span></li>
+            <li>Contact</li>
+        </ul>
+    </section>
+
+    <section class="title">
+        <h1>Frontend Developer</h1>
+        <p>html only proper layout, no styling</p>
+    </section>
+
+    <table>
+        <tr>
+            <td class="projects">
+                <!-- projects -->
+                <h3>Projects</h3>
+                <table>
+                    <tr>
+                        <td>HTML Only portfolio</td>
+                    </tr>
+                    <tr>
+                        <td>Calculator</td>
+                    </tr>
+                    <tr>
+                        <td>Quiz App</td>
+                    </tr>
+                    <tr>
+                        <td>Countdown Timer</td>
+                    </tr>
+                    <tr>
+                        <td>Product Upcoming page</td>
+                    </tr>
+                </table>
+            </td>
+
+
+            <td>
+                <!-- workex -->
+                <h3>Work Experience</h3>
+                <article>
+                    <h4>roadmap.sh</h4>
+                    <p>Solved all the frontend projects</p>
+                    <a href="#visit-profile">Visit my profile</a>
+                </article>
+                <hr>
+                <article>
+                    <h4>OpenSource Work</h4>
+                    <p>Contributed to 50 opensource projects
+                        MAde my own projects with 200 Github Starts.
+                    </p>
+                    <a href="#visit-github">Visit my GitHub Profile</a>
+                </article>
+            </td>
+
+
+            <td>
+                <!-- education -->
+                <h3>Education</h3>
+                <p>Graduation with 3.57 out of 4 CGPA</p>
+                <p>Courses I took:</p>
+                <ul>
+                    <li>OOP</li>
+                    <li>DSA</li>
+                    <li>Web Engineering</li>
+                    <li>AI</li>
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+
+    <section class="review">
+        <h2>Reviews from my Teachers</h2>
+        <div class="reviewer">
+            <article class="fill">
+                <blockquote>Joh doe was a brilliant student; always stood out with his asiignments</blockquote>
+                <p>Jane Doe</p>
+                <p>Assistant professor</p>
+            </article>
+            <article class="fill">
+                <blockquote>Joh doe was a brilliant student; always stood out with his asiignments</blockquote>
+                <p>Jane Doe</p>
+                <p>Assistant professor</p>
+            </article>
+            <article class="fill">
+                <blockquote>Joh doe was a brilliant student; always stood out with his asiignments</blockquote>
+                <p>Jane Doe</p>
+                <p>Assistant professor</p>
+            </article>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        &copy; all rights reserved 2025
+    </footer>
+
+</body>
+
+</html>
