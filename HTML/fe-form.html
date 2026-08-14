@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 30px;
+        }
+        .navigation ul{
+            display: flex;
+            gap: 40px;
+            padding: 0;
+            list-style: none;
+        } 
+
+        .form{
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        
+        .form label{
+        width: 100px;
+
+        }
+        .form input, .form select, .form textarea{
+            padding: 5px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            width: 315px;
+        }
+        .radio div{
+            margin-bottom: 5px;
+        }
+        .radio input{
+            margin: 8px 5px 8px 0;
+        }
+        .radio label{
+            margin-right: 10px;
+        }
+        hr{
+            border: 1.5px solid #000;
+        }
+
+        .newsletter{
+            margin-top: 20px;
+        }
+
+        #send{
+            width: 30px;
+            height: 16px;
+            border: 4px solid #000;
+            color: #000;
+            accent-color: #000;
+        }
+
+        button {
+            display: block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background-color: white;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="radio"], input[type="checkbox"]{
+            accent-color: #000;
+            border: 2px solid #000;
+        }
+      
+    </style>
+</head>
+<body>
+    <section class="header">
+        <h1>Acme Support</h1>
+        <nav class="navigation">
+            <ul>
+                <li>Home</li>
+                <li>Help</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <hr>
+    </section>
+
+    <section>
+        <h1>Contact us</h1>
+        <p>Send us a message and we will get bacl to you</p>
+        <form action="#" method="post">
+            <div class="form">
+                <label for="fullname">Fullname</label>
+                <input type="text" id="fullname" name="fullname" required/>
+            </div>
+            <div class="form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required/>
+            </div>
+            <div class="form">
+                <label for="topic">Subject</label>
+               <select id="topic" name="topic" class="form">
+                    <option value="#">Choose a topic</option>
+                    <option value="#">HTML</option>
+                    <option value="#">CSS</option>
+                    <option value="#">JS</option>
+               </select>
+            </div>
+            <div class="form">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="10" cols="10" minlength="100" required>
+                </textarea>
+            </div>
+
+            <fieldset class="radio">
+                <legend> How did you hear about us?</legend>
+                <div>
+                    <input type="radio" id="search" name="hear" value="search">
+                    <label for="search">Seacrh</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="friend" name="hear" value="Friend">
+                    <label for="friend">Friend</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="media" name="hear" value="Media">
+                    <label for="Media">Social Media</label>
+                </div>
+            </fieldset>
+
+            <div class="newsletter">
+                <input type="checkbox" name="send" value="send" id="send"/>
+                <label for="send">Send me product updates</label>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <hr>
+    </section>
+    <footer>
+        <p>&copy; 2026 Acme Support</p>
+    </footer>
+</body>
+</html>
