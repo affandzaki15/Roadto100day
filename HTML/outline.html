@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border vs Outline</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 30px;
+        }
+
+        .card {
+            width: 50%;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        /* BORDER */
+        .border-card {
+            border: 8px solid black;
+        }
+
+        /* OUTLINE */
+        .outline-card {
+            border: 0;
+            outline: 8px solid black;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* BORDER HOVER */
+        .border-card:hover {
+            border-width: 15px;
+        }
+
+        /* OUTLINE HOVER */
+        .outline-card:hover {
+            outline-width: 15px;
+        }
+
+        .info {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border: 2px solid #ccc;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input:focus {
+            outline: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Border vs Outline</h1>
+
+        <div class="cards">
+
+            <div class="card border-card">
+                <h2>Border</h2>
+
+                <p>
+                    Border merupakan bagian dari box model.
+                    Ketika ukuran border berubah, ukuran
+                    box juga dapat memengaruhi layout.
+                </p>
+
+                <button>Button</button>
+            </div>
+
+
+            <div class="card outline-card">
+                <h2>Outline</h2>
+
+                <p>
+                    Outline berada di luar border dan tidak
+                    mengambil ruang dalam layout.
+                    Karena itu perubahan outline tidak
+                    menggeser elemen lain.              
+                </p>
+
+                <button>Button</button>
+            </div>
+
+        </div>
+
+
+        <div class="info">
+
+            <h2>Focus Example</h2>
+
+            <label for="username">Username</label>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Klik input ini"
+            >
+
+        </div>
+
+    </div>
+
+</body>
+</html>
