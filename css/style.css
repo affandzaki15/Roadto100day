@@ -2,22 +2,32 @@
     box-sizing: border-box;
 }
 
-body {
 
+body {
+    max-width: 700px;
+    margin: 30px auto
+}
+
+.title{
+    text-align:center;
 }
 
 /* review 1 */
 .display-one{
     display: flex;
+    max-width: 800px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 
-.reviewer{
+
+.reviewer-one{
     display: flex;
-    margin: 20px 18px;
+    margin: 25px 18px;
 }
 
-.reviewer img{
+.reviewer-one img{
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -42,7 +52,7 @@ body {
     color: white;
     border-radius: 20px;
     padding: 3px;
-    width: 45%;
+    width: 100%;
 }
 
 .quote::after{
@@ -50,7 +60,7 @@ body {
     content: "";
     position: absolute;
 
-    bottom: -15px;
+    bottom: -12px;
     left: 40px;
    
     width:0;
@@ -65,3 +75,33 @@ body {
 
 /* review 2 */
 
+.review-two{
+     border: 2px solid #000;
+     border-radius: 15px;
+     max-width: 300px;
+     margin: 0;
+     padding: 0;
+}
+
+blockquote{
+    margin: 18px;
+}
+.reviewer-two{
+    display: flex;
+    margin: 20px 18px;
+}
+
+.reviewer-two img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name h3{
+    margin-bottom:5px;
+}
+
+.name p{
+    margin-top:0;
+}
