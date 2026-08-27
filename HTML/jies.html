@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Demo</h1>
+    <p id="demo"></p>
+
+    <script>
+        let isMember = true;
+        let price = 10000;
+        let discount = isMember ? 0.2 : 0;
+        let total = 10000 - (price * discount)
+
+        document.getElementById("demo").innerHTML =  "the price is" + " " + total
+    </script>
+</body>
+</html>
