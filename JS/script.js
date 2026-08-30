@@ -227,14 +227,8 @@ for (let i = 0; i < penarikan.length; i++){
 console.log(`Saldo akhir: ${saldo}`)
 console.log(`Jumlah Berhasil: ${jumbel}`)
 
-// let text = "";
-// loop1: for (let j = 1; j < 5; j++){
-//     loop2: for (let i = 1; i< 5; i++){
-//        if(i===3){
-//         break loop1;
-//        }
-//        text += i + "<br>"
-//     }
-// }
-
-// console.log(text)
+function myKali (x, y){
+    return x * y;
+}
+const anjay = myKali(3, 5);
+console.log(anjay)
