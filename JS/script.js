@@ -194,41 +194,42 @@
 // console.log(total);
 // console.log(jumlahBesar);
 
-const nilai = [85, 45, 90, 60, 72, 30, 95]
-let total = 0;
-let jumlah = 0;
-for (let i = 0; i < nilai.length; i++ ){
-    if(nilai[i] < 70){
-        continue
-    }
-    total += nilai[i]
-    jumlah++
+// const nilai = [85, 45, 90, 60, 72, 30, 95]
+// let total = 0;
+// let jumlah = 0;
+// for (let i = 0; i < nilai.length; i++ ){
+//     if(nilai[i] < 70){
+//         continue
+//     }
+//     total += nilai[i]
+//     jumlah++
    
-    console.log(`nilai lulus:${nilai[i]}`)
-}
-console.log(`Jumlah lulus: ${jumlah}`);
-console.log(`Total nilai: ${total}`);
+//     console.log(`nilai lulus:${nilai[i]}`)
+// }
+// console.log(`Jumlah lulus: ${jumlah}`);
+// console.log(`Total nilai: ${total}`);
 
-let saldo = 500000;
-const penarikan = [100000, 50000, 200000, 300000, 50000];
+// let saldo = 500000;
+// const penarikan = [100000, 50000, 200000, 300000, 50000];
 
-let jumbel = 0
-for (let i = 0; i < penarikan.length; i++){
-    if (penarikan[i] > saldo){
-        console.log(`penarikan ${penarikan[i]}: Saldo tidak cukup`);
-        continue;
-    }
-    saldo -= penarikan[i];
-    jumbel++;
+// let jumbel = 0
+// for (let i = 0; i < penarikan.length; i++){
+//     if (penarikan[i] > saldo){
+//         console.log(`penarikan ${penarikan[i]}: Saldo tidak cukup`);
+//         continue;
+//     }
+//     saldo -= penarikan[i];
+//     jumbel++;
 
-    console.log(`penarikan ${penarikan[i]}: Berhasil`)
-}
+//     console.log(`penarikan ${penarikan[i]}: Berhasil`)
+// }
 
-console.log(`Saldo akhir: ${saldo}`)
-console.log(`Jumlah Berhasil: ${jumbel}`)
+// console.log(`Saldo akhir: ${saldo}`)
+// console.log(`Jumlah Berhasil: ${jumbel}`)
 
-function myKali (x, y){
-    return x * y;
-}
-const anjay = myKali(3, 5);
-console.log(anjay)
+// function myKali (x, y){
+//     return x * y;
+// }
+// const anjay = myKali(3, 5);
+// console.log(anjay)
+
