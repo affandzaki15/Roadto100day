@@ -73,6 +73,8 @@ function tentukanGrade(nilai){
     } else {
         console.log("E")
     }
+
+    return
 }
 tentukanGrade(85)
 
@@ -114,3 +116,16 @@ function updateNilai (id, nilaiBaru){
 }
 
 console.log(updateNilai(2,82))
+
+
+// 10
+function tampilkanSummary(id){
+    const sum = students.find(data => data.id === id)
+
+    const summary = {
+        ...sum,
+    }
+    return summary
+}
+
+console.log (tampilkanSummary(1))
