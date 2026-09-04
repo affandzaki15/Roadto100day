@@ -13,35 +13,69 @@ function cariProduk(id){
         return "Produk tidak ditemukan"
     }
     const {nama, harga, stok} = cari
-    const hasil = `${nama} - Rp${harga} - Stok: ${stok}`
-    console.log(hasil)
+    return `${nama} - Rp${harga} - Stok: ${stok}`
 }
-cariProduk(2)
+console.log(cariProduk(2))
 
 // 2
 function cekStok(id){
     const cek = products.find(data => data.id === id)
 
+    if(!cek){
+        return "Produk tidak nemu"
+    }
     const{nama, stok} = cek
     if(stok < 1){
-         console.log (`${nama} habis`) 
+         return (`${nama} habis`) 
         } else {
-            console.log (`${nama} tersedia`) 
+            return (`${nama} tersedia`) 
     }
 }
-cekStok(3)
+console.log(cekStok(3))
 
 // 3
-const produkTersedia = products
-    .filter(stock => stock.stok > 0)
-    .map(nama => nama.nama)
-    .join(", ")
-console.log(produkTersedia)
+function produkTersedia(){
+    return products
+        .filter(data => data.stok > 0)
+        .map(data => data.nama)
+        .join(", ")
+}
+console.log(produkTersedia())
 
 // 4 reduce
-const total = products.reduce((acc, value)=>{
-  return  acc + value.harga * value.stok
-},0)
+function hitungTotal(){
+    return products.reduce((acc, data)=> {
+        return acc + data.harga * data.stok
+    }, 0)
+}
 
-const hasil2 = `Total nilai seluruh stok: Rp ${total}`
+const hasil2 = `Total nilai seluruh stok: Rp ${hitungTotal()}`
 console.log(hasil2)
+
+// 5 Laporan
+function buatLaporan(){
+    const laporan = products.length
+    const produk = products
+        .filter(data => data.stok > 0)
+        .length
+    const produkHabis = products
+    .filter(data => data.stok === 0)
+    .length
+    const total = hitungTotal()
+    const mahal = products.reduce((acc, data) => {
+        if(data.harga > acc.harga){
+            return data
+        }
+        return acc
+    }, products[0])
+
+    return `
+    === LAPORAN TOKO ===
+    Total Produk : ${laporan}
+    Produk Tersedia : ${produk}
+    Produk Habis : ${produkHabis}
+    Total Nilai stok: Rp ${total}
+    Produk Termahal: ${mahal.nama}
+    `
+}
+console.log(buatLaporan())
