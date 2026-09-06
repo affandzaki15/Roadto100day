@@ -25,9 +25,11 @@
 }
 
 .stats-card {
+width: 200px;
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
+  text-align: center;
 }
 
 .stats-card h2 {
@@ -36,21 +38,90 @@
 
 /* seacrh */
 .seacrh {
+  width: 300px;
+  margin: 50px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 50px 600px;
+  align-items: center;
   gap: 10px;
   border: 1px solid #c2baba;
   border-radius: 10px;
-  padding: 8px
+  padding: 8px;
 }
 
 .input-mhs {
-    border: none;
-    padding:6px
+  border: none;
+  padding: 6px;
 }
 .select-mhs {
-    border: none;
-  
+  border: none;
+}
+
+.card-daftar{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width:400px;
+    margin: 0 auto;
+    border: 2px solid #000;
+    border-radius: 10px
+}
+
+.fill{
+    /* text-align: left; */
+    padding: 10px 20px
+}
+
+.fill-nama{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    text-align: right
+}
+
+
+/* Mahasiswa terbaik */
+.mhs-terbaik{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.button-mhs{
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    display:flex;
+    
+}
+
+.add-mhs{
+    
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    display:flex;
+    flex-direction: column;
+    gap:20px
+}
+
+.label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.label label{
+    width: 80px 
+}
+.label span{
+    width: 30px 
+}
+.label input{
+    width: 200px 
 }

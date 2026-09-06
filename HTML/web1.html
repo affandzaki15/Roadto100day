@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Manager</title>
     <link rel="stylesheet" href="../css/web1.css" />
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -25,7 +27,7 @@
             <h2>RATA-RATA NILAI</h2>
             <p></p>
         </div>
-        <div class="stats-card" >
+        <div class="stats-card">
             <h2>MAHASISWA LULUS</h2>
             <p></p>
         </div>
@@ -34,18 +36,70 @@
             <p></p>
         </div>
     </div>
-    
+
 
     <!-- SEACRH & FILTER -->
-     <form class="seacrh">
+    <form class="seacrh">
         <input class="input-mhs" type="text" placeholder="Cari Mahasiswa..." />
         <select class="select-mhs">
             <option value="Semua">Semua V</option>
             <option value="lulus">Lulus</option>
             <option value="tidak-lulus">Tidak Lulus</option>
         </select>
-     </form>
+    </form>
 
-    
+    <!-- CARD DAFTAR MAHASISWWA -->
+    <div class="card-daftar">
+        <div class="fill">
+            <div class="fill-nama">
+                <h2>Affan</h2>
+                <p>LULUS</p>
+            </div>
+            <div>
+                <p>Informatika</p>
+                <p>23 tahun</p>
+            </div>
+            <p>Nilai:</p>
+            <div>
+                <button>Detail</button>
+                <button>Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mahasiswa Terbaik -->
+    <div class="mhs-terbaik">
+        <h2>MAHASISWA TERBAIK</h2>
+        <p>Caca</p>
+        <p>90</p>
+        <p>Informatika</p>
+    </div>
+
+    <button class="button-mhs">Lihat Mahasiswa Terbaik</button>
+
+    <!-- ADD MAHASISWA -->
+    <form class="add-mhs">
+        <h1>TAMBAH MAHASISWA</h1>
+        <div class="label">
+            <label>Nama </label><span>:</span>
+            <input type="text" id="nama" />
+        </div>
+        <div class="label">
+            <label>Umur </label><span>:</span>
+            <input type="text" id="umur" />
+        </div>
+        <div class="label">
+            <label>Jurusan </label> <span>:</span>
+            <input type="text" id="jurusan" />
+        </div>
+        <div class="label">
+            <label>Nilai </label> <span>:</span>
+            <input type="text" id="nilai" />
+        </div>
+
+        <button>+ Tambah</button>
+    </form>
+
 </body>
+
 </html>
