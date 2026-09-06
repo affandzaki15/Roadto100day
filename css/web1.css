@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.header {
+  text-align: center;
+  margin: 50px;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+.header p {
+  margin-top: 0;
+}
+
+/* stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.stats-card {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stats-card h2 {
+  font-size: 15px;
+}
+
+/* seacrh */
+.seacrh {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 600px;
+  gap: 10px;
+  border: 1px solid #c2baba;
+  border-radius: 10px;
+  padding: 8px
+}
+
+.input-mhs {
+    border: none;
+    padding:6px
+}
+.select-mhs {
+    border: none;
+  
+}
