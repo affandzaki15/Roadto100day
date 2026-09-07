@@ -60,24 +60,36 @@ width: 200px;
 
 .card-daftar{
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    width:400px;
+    width: 900px;
     margin: 0 auto;
+    gap: 20px
+  }
+  
+  .fill{
+    width: 100%;
     border: 2px solid #000;
-    border-radius: 10px
-}
-
-.fill{
-    /* text-align: left; */
-    padding: 10px 20px
+    border-radius: 10px;
+    padding: 20px
 }
 
 .fill-nama{
     display: flex;
-    justify-content: right;
-    align-items: right;
-    text-align: right
+    justify-content: space-between;
+}
+.fill-nama p{
+   font-size: 12px
+}
+
+@media (max-width: 768px){
+  
+  .card-daftar{
+     display: flex;
+     flex-direction: column;
+     width: 400px;
+      margin: 0 auto;
+      gap: 20px
+    }
+
 }
 
 
