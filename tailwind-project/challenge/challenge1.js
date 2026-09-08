@@ -32,3 +32,42 @@ const totalGame = games.reduce((acc, value)=>{
 }, 0)
 const hasil = `stok semuanya adalah ${totalGame}`
 console.log(hasil)
+
+// foreach js
+const flights = [
+  { kode: "GA101", tujuan: "Bali", penumpang: 120 },
+  { kode: "JT202", tujuan: "Jakarta", penumpang: 85 },
+  { kode: "QZ303", tujuan: "Surabaya", penumpang: 150 },
+];
+
+// 1
+flights.forEach((flight) => {
+  const data = `${flight.kode} -${flight.tujuan}`
+  console.log(data)
+})
+
+// 2
+flights.forEach((data) =>{
+  if(data.penumpang > 100) {
+      const semua = `${data.kode}-${data.penumpang} penumpang`
+      console.log (semua)
+  }
+})
+
+// 3
+function tampilkanPenerbangan(data){
+
+  let hasil = "";
+  data.forEach((flight) => {
+    const all = `${flight.kode} -> ${flight.tujuan} `;
+      hasil += all
+
+  })
+
+  return hasil
+}
+
+const terbang = `penerbangan yang akan landas hari ini adalah ${tampilkanPenerbangan(flights)}`
+console.log(terbang)
+
+
