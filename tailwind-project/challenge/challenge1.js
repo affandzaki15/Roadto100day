@@ -67,7 +67,36 @@ function tampilkanPenerbangan(data){
   return hasil
 }
 
+
 const terbang = `penerbangan yang akan landas hari ini adalah ${tampilkanPenerbangan(flights)}`
 console.log(terbang)
 
 
+// ORDER CALLBACK
+
+const orders = [
+  { kode: "ORD01", produk: "Keyboard", jumlah: 2 },
+  { kode: "ORD02", produk: "Mouse", jumlah: 5 },
+  { kode: "ORD03", produk: "Monitor", jumlah: 1 },
+];
+
+function tampilkanPesanan(data){
+  data.forEach((order) =>{
+    const komputer = `${order.kode} - ${order.produk}`
+    console.log(komputer)
+  })
+}
+tampilkanPesanan(orders)
+
+
+function tampilkanPesanannya(data){
+
+  let hasil = "";
+  data.forEach((order) =>{
+    const komputer = `${order.kode} - ${order.produk} `
+    hasil += komputer
+  })
+  return hasil
+}
+const hasil2 = `Pesanan hari ini: ${tampilkanPesanannya(orders)}`
+console.log(hasil2)
