@@ -54,3 +54,11 @@ function filterMovie() {
 
     tampilkanMovie(hasil2);
 }
+
+search.addEventListener("input", () =>{
+    filterMovie()
+})
+
+filter.addEventListener("change", () =>{
+    filterMovie()
+})
