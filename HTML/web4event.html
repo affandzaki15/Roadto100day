@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Dashboard</title>
+    <link rel="stylesheet" href="../css/web4.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Event Dashboard</h1>
+            <p>Find events based on category and search.</p>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Event</span>
+                <strong id="total-event">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Event Gratis</span>
+                <strong id="free-event">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Rating Tertinggi</span>
+                <strong id="highest-rating">0</strong>
+            </div>
+
+        </section>
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="search-event"
+                placeholder="Cari nama event..."
+            >
+
+            <select id="filter-category">
+                <option value="semua">Semua Kategori</option>
+                <option value="Technology">Technology</option>
+                <option value="Business">Business</option>
+                <option value="Design">Design</option>
+            </select>
+
+        </section>
+
+        <section id="event-list" class="event-list"></section>
+
+    </main>
+
+    <script src="../JS/web4.js"></script>
+
+</body>
+</html>
