@@ -127,13 +127,15 @@ function cariEvent(id){
 cariEvent(3)
 
 function adaEventMahal(){
-    const mahal = events.some(data => data.harga >= 100000)
+    const mahal = events.some(data => data.harga > 100000)
     console.log(mahal)
 }
 adaEventMahal()
 
 function getNamaTechnology(){
-    const getNama = events.map(data => data.nama)
+    const getNama = events
+    .filter(data => data.kategori === "Technology")
+    .map(data => data.nama)
     console.log(getNama)
 }
 getNamaTechnology()
