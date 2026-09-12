@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../css/job.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+      <h1>Job Application Tracker</h1>
+      <p>Use the website to find your dream job</p>
+
+      <form id="job-form">
+        <input
+          type="text"
+          placeholder="input your company"
+          id="company-input"
+        />
+        <input type="text" placeholder="input your job" id="job-input" />
+        <button type="submit">Tambah</button>
+      </form>
+
+      <div id="job-filter">
+        <button>All</button>
+        <button>Applied</button>
+        <button>Interview</button>
+        <button>Rejected</button>
+      </div>
+
+      <div id="job-hasil"></div>
+
+      <div id="job-stats"></div>
+    </div>
+  </body>
+  <script src="../JS/job.js"></script>
+</html>
