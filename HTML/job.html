@@ -20,12 +20,11 @@
         <input type="text" placeholder="input your job" id="job-input" />
         <button type="submit">Tambah</button>
       </form>
-
       <div id="job-filter">
-        <button>All</button>
-        <button>Applied</button>
-        <button>Interview</button>
-        <button>Rejected</button>
+        <button onclick="filterApplication('all')">All</button>
+        <button onclick="filterApplication('applied')">Applied</button>
+        <button onclick="filterApplication('interview')">Interview</button>
+        <button onclick="filterApplication('rejected')">Rejected</button>
       </div>
 
       <div id="job-hasil"></div>
