@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="nama" placeholder="Masukkan nama" />
+    <button id="btn">Tampilkan</button>
+
+    <p id="hasil">Nama akan muncul di sini</p>
+  </body>
+
+  <script>
+    const nama = document.querySelector("#nama")
+    const button = document.querySelector("#btn")
+    const result = document.querySelector("#hasil")
+
+    button.addEventListener("click",()=>{
+        result.textContent = "Halo, " + nama.value
+    })
+  </script>
+</html>

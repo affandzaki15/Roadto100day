@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="todo-form">
+      <input id="todo-input" placeholder="Masukkan todo" />
+      <button type="submit">Tambah</button>
+    </form>
+
+    <p id="hasil"></p>
+  </body>
+
+  <script>
+    const todo = document.querySelector("#todo-form")
+    const input = document.querySelector("#todo-input")
+    const hasil = document.querySelector("#hasil")
+
+    todo.addEventListener("submit", (event)=>{
+        event.preventDefault();
+        hasil.textContent = "Todo: " + input.value
+    })
+  </script>
+</html>

@@ -1,26 +1,26 @@
-// const students= [
-//     {
-//         id: 1,
-//         nama: "affan",
-//         umur: 23,
-//         jurusan: "Informatika",
-//         nilai: 85
-//     },
-//     {
-//         id: 2,
-//         nama: "Budi",
-//         umur: 22,
-//         jurusan: "Sistem Informasi",
-//         nilai: 78
-//     },
-//     {
-//         id: 3,
-//         nama: "Caca",
-//         umur: 21,
-//         jurusan: "Informatika",
-//         nilai: 92
-//     }
-// ]
+const students= [
+    {
+        id: 1,
+        nama: "affan",
+        umur: 23,
+        jurusan: "Informatika",
+        nilai: 85
+    },
+    {
+        id: 2,
+        nama: "Budi",
+        umur: 22,
+        jurusan: "Sistem Informasi",
+        nilai: 78
+    },
+    {
+        id: 3,
+        nama: "Caca",
+        umur: 21,
+        jurusan: "Informatika",
+        nilai: 92
+    }
+]
 
 // console.log(students)
 
@@ -55,18 +55,18 @@
 // const pushs = students.push(mahasiswaBaru)
 // console.log(pushs)
 
-// // 4
-// const updateMahasiswa = students.map(student =>{
-//     if(student.id === 1){
-//         return{
-//             ...student,
-//             nilai: 95
-//         }
-//     }
-//     return student
-// })
+// 4
+const updateMahasiswa = students.map(student =>{
+    if(student.id === 1){
+        return{
+            ...student,
+            nilai: 95
+        }
+    }
+    return student
+})
 
-// console.log(updateMahasiswa)
+console.log(updateMahasiswa)
 
 // // 5
 

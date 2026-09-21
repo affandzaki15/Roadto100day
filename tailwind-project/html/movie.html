@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+  </head>
+
+  <body class="bg-gray-100">
+
+    <main class="max-w-xl mx-auto p-6">
+
+      <h1 class="text-3xl font-bold text-center mb-6">
+        Movie Finder
+      </h1>
+
+      <!-- Search & Filter -->
+      <div class="bg-white p-4 rounded-lg shadow mb-6">
+
+        <input
+          type="text"
+          id="search-movie"
+          placeholder="Cari judul film..."
+          class="w-full border border-gray-300 rounded px-3 py-2 mb-3"
+        />
+
+        <select
+          id="filter-genre"
+          class="w-full border border-gray-300 rounded px-3 py-2"
+        >
+          <option value="semua">Semua Genre</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Drama">Drama</option>
+          <option value="Action">Action</option>
+        </select>
+
+      </div>
+
+      <!-- Movie List -->
+      <div id="movie-list" class="space-y-3">
+      </div>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+    </style>
+  </head>
+  <body>
+    <p id="todo">Belajar JavaScript</p>
+    <button id="btn">Tandai Selesai</button>
+  </body>
+  <script>
+    const todo = document.querySelector("#todo")
+    const button = document.querySelector("#btn")
+
+    button.addEventListener("click", ()=>{
+        todo.classList.toggle('done')
+    })
+  </script>
+</html>

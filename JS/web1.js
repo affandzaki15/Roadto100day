@@ -133,3 +133,5 @@ const jurusanTerbaik = document.querySelector("#terbaik-jurusan");
 namaTerbaik.textContent = terbaik.nama;
 nilaiTerbaik.textContent = terbaik.nilai;
 jurusanTerbaik.textContent = terbaik.jurusan
+
+
