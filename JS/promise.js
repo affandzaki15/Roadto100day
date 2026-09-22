@@ -303,9 +303,49 @@
 //   }
 // }, 2000);
 
-// 
+//
 const loadBtn = document.querySelector("#load-btn");
 const loadingUser = document.querySelector("#loading");
 const errorUser = document.querySelector("#error");
-const productList = document.querySelector("#produck-list");
+const productList = document.querySelector("#product-list");
 
+async function productBTN() {
+  try {
+    const response = await fetch("https://dummyjson.com/0000");
+    if (!response.ok) {
+      throw new Error(`Data Error: ${response.status}`);
+    }
+    loadingUser.textContent = "";
+    const datas = await response.json();
+
+    productList.innerHTML = "";
+    datas.products.forEach((data) => {
+      productList.innerHTML += `
+      <div class="product-card">
+      <img src="${data.images[0]}"/>
+     <div class="product-content">
+     <h2>${data.title}</h2>
+     <p>${data.category}</p>
+     <p>${data.description}</p>
+     <p class="price">${data.price}</p>
+     </div>
+      
+      </div>
+      `;
+    });
+  } catch (error) {
+    loadingUser.textContent = "";
+
+    errorUser.innerHTML = `
+<p>Data tidak ditemukan</p>
+<p>${error.message}</p>
+`;
+  }
+}
+
+loadBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  loadingUser.textContent = "Loading...";
+  errorUser.textContent = "";
+  productBTN();
+});
