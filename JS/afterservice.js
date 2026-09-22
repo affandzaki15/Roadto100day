@@ -200,3 +200,92 @@
 // }
 
 // booklet(books)
+
+const habits = [
+  {
+    id: 1,
+    name: "Coding",
+    category: "Skill",
+    target: 5,
+    completed: 3
+  },
+  {
+    id: 2,
+    name: "Exercise",
+    category: "Health",
+    target: 4,
+    completed: 4
+  },
+  {
+    id: 3,
+    name: "Reading",
+    category: "Knowledge",
+    target: 7,
+    completed: 5
+  },
+  {
+    id: 4,
+    name: "English",
+    category: "Skill",
+    target: 5,
+    completed: 2
+  }
+];
+
+const listHabbit = document.querySelector("#habit-list")
+const statsHabbit = document.querySelector("#habits-stats")
+
+function habitKuy(habit){
+  listHabbit.innerHTML = ""
+
+  habit.forEach(data => {
+    let tombol ="";
+
+    if(data.completed === data.target){
+      tombol = `<button onClick=ubahTarget(${data.id})>Reset</button>`
+    } else{
+      tombol = `<button onClick=ubahTarget(${data.id})>+1 Progress</button>`
+
+    }
+    listHabbit.innerHTML += `
+      <div>
+        <p>${data.name}</p>
+        <p>Category: ${data.category}</p>
+        <p>Progress: ${data.completed} / ${data.target}</p>
+        <p>Status: ${data.completed === data.target ? "completed" : "in progress"}</p>
+        ${tombol}
+      </div>
+    
+    `
+  })
+}
+
+
+function tampilkanStatistik(){
+  const total = habits.length
+  const completed = habits.filter(data => data.completed === data.target).length
+  const inProgress = habits.filter(data =>data.completed < data.target).length
+  statsHabbit.innerHTML = `
+  <div>
+  <p>Total: ${total}</p>
+  <p>completed: ${completed}</p>
+  <p>inProgress: ${inProgress}</p>
+  </div>
+  `
+}
+function ubahTarget(id){
+  const exercises = habits.find(data => data.id === id)
+  let counter = exercises.completed
+  if(counter < exercises.target){
+    exercises.completed++
+  } else {
+    exercises.completed = 0
+  }
+  habitKuy(habits)
+  tampilkanStatistik()
+  
+}
+
+
+tampilkanStatistik()
+habitKuy(habits)
