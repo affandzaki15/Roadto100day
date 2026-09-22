@@ -266,7 +266,6 @@
 // }
 // ambilUser();
 
-
 // LOAD
 // async function ambilUser() {
 //  process.stdout.write("Loading data...")
@@ -285,21 +284,28 @@
 // }
 // ambilUser();
 
-console.log("Loading data...");
+// console.log("Loading data...");
 
-setTimeout(async () => {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+// setTimeout(async () => {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
 
-    if (!response.ok) {
-      throw new Error(`HTTP Error: ${response.status}`);
-    }
+//     if (!response.ok) {
+//       throw new Error(`HTTP Error: ${response.status}`);
+//     }
 
-    const data = await response.json();
+//     const data = await response.json();
 
-    console.log(`Nama: ${data.name}`);
-    console.log(`Email: ${data.email}`);
-  } catch (error) {
-    console.log(error.message);
-  }
-}, 2000);
+//     console.log(`Nama: ${data.name}`);
+//     console.log(`Email: ${data.email}`);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }, 2000);
+
+// 
+const loadBtn = document.querySelector("#load-btn");
+const loadingUser = document.querySelector("#loading");
+const errorUser = document.querySelector("#error");
+const productList = document.querySelector("#produck-list");
+
