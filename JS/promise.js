@@ -311,7 +311,7 @@ const productList = document.querySelector("#product-list");
 
 async function productBTN() {
   try {
-    const response = await fetch("https://dummyjson.com/0000");
+    const response = await fetch("https://dummyjson.com/products");
     if (!response.ok) {
       throw new Error(`Data Error: ${response.status}`);
     }
