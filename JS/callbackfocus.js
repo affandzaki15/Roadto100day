@@ -142,74 +142,131 @@
 //         </div>
 //         `
 //     })
-// }
-// searchList.addEventListener("input", ()=>{
-//     const keyword = searchList.value.toLowerCase()
+// // }
+// // searchList.addEventListener("input", ()=>{
+// //     const keyword = searchList.value.toLowerCase()
 
-//     const hasil = products.filter((data)=>{
-//        return data.name.toLowerCase().includes(keyword)
-//     })
-//     prosesData(hasil, (data)=>{
-//         ambilData(data)
-//     })
+// //     const hasil = products.filter((data)=>{
+// //        return data.name.toLowerCase().includes(keyword)
+// //     })
+// //     prosesData(hasil, (data)=>{
+// //         ambilData(data)
+// //     })
+// // })
+
+// // ambilData(products)
+
+// const products = [
+//   { name: "Laptop", category: "Electronics", price: 12000000 },
+//   { name: "Mouse", category: "Electronics", price: 250000 },
+//   { name: "Keyboard", category: "Electronics", price: 750000 },
+//   { name: "T-Shirt", category: "Fashion", price: 150000 },
+//   { name: "Jeans", category: "Fashion", price: 350000 },
+// ];
+
+// const searchList = document.querySelector("#search");
+// const categoryList = document.querySelector("#category");
+// const productList = document.querySelector("#list");
+
+// function prosesData(data, callback) {
+//   callback(data);
+// }
+
+// function ambilData(params) {
+//   productList.innerHTML = "";
+//   params.forEach((data) => {
+//     productList.innerHTML += `
+//             <div>
+//             <p> ${data.name}</p>
+//             <p> ${data.category}</p>
+//             <p> ${data.price}</p>
+//             </div>
+
+//         `;
+//   });
+// }
+
+// function prosesList() {
+//   const category = categoryList.value;
+//   const keyword = searchList.value.toLowerCase();
+//   const hasil = products
+//   .filter((data) => {
+//     return data.name.toLowerCase().includes(keyword);
+//   })
+//   .filter(data =>{
+//     return category === "all" || data.category === category
+//   })
+
+//   prosesData(hasil, (data) => {
+//     ambilData(data);
+//   });
+// }
+
+// searchList.addEventListener("input", () => {
+//     prosesList()
+// });
+
+// categoryList.addEventListener("change", () =>{
+//     prosesList()
 // })
 
-// ambilData(products)
+// ambilData(products);
 
-const products = [
-  { name: "Laptop", category: "Electronics", price: 12000000 },
-  { name: "Mouse", category: "Electronics", price: 250000 },
-  { name: "Keyboard", category: "Electronics", price: 750000 },
-  { name: "T-Shirt", category: "Fashion", price: 150000 },
-  { name: "Jeans", category: "Fashion", price: 350000 },
-];
+const cari = document.querySelector("#search");
+const list = document.querySelector("#list");
+const kategori = document.querySelector("#category");
 
-const searchList = document.querySelector("#search");
-const categoryList = document.querySelector("#category");
-const productList = document.querySelector("#list");
+let semuaMakanan = [];
+async function food() {
+  const api = await fetch("https://dummyjson.com/recipes");
+
+  if (!api.ok) {
+    throw new Error(`Data tidak ditemukan`);
+  }
+
+  const data = await api.json();
+  semuaMakanan = data.recipes;
+  tampilkanData(semuaMakanan)
+}
+
+function tampilkanData(makan) {
+  list.innerHTML = "";
+  makan.forEach((data) => {
+    list.innerHTML += `
+    <div>
+      <p>${data.name}</p>
+      <p>${data.cuisine}</p>
+    </div>
+   `;
+  });
+}
 
 function prosesData(data, callback) {
   callback(data);
 }
 
-function ambilData(params) {
-  productList.innerHTML = "";
-  params.forEach((data) => {
-    productList.innerHTML += `
-            <div>
-            <p> ${data.name}</p>
-            <p> ${data.category}</p>
-            <p> ${data.price}</p>
-            </div>
-        
-        `;
-  });
-}
-
 function prosesList() {
-  const category = categoryList.value;
-  const keyword = searchList.value.toLowerCase();
-  const hasil = products
-  .filter((data) => {
-    return data.name.toLowerCase().includes(keyword);
+  const keyword = cari.value.toLowerCase()
+  const category = kategori.value
+  const makanan = semuaMakanan
+    .filter((data) => {
+    return data.name.toLowerCase().includes(keyword)
   })
-  .filter(data =>{
-    return category === "all" || data.category === category
-  })
+    .filter((data) =>{
+      return category === "all" || data.cuisine === category
+    })
 
-
-
-  prosesData(hasil, (data) => {
-    ambilData(data);
+  prosesData(makanan, (data) => {
+    tampilkanData(data);
   });
 }
 
-searchList.addEventListener("input", () => {
-    prosesList()
+cari.addEventListener("input", () => {
+  prosesList();
 });
 
-categoryList.addEventListener("change", () =>{
-    prosesList()
+kategori.addEventListener("change", ()=>{
+  prosesList()
 })
 
-ambilData(products);
+food();
