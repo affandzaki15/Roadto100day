@@ -1,0 +1,61 @@
+/* .gambar {
+    border: 2px solid #2a2f33;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.tag{
+    display: flex;
+    margin: 20px
+}
+
+.name{
+    margin-left: 10px
+}
+.name h2 {
+    margin-bottom: 5px;
+    color: #2a2f33
+}
+.name p {
+    margin-top: 0px;
+    color: #ccd6dd
+} */
+
+body{
+    margin: 30px
+}
+.form {
+    width: 100%;
+}
+
+.input{
+    margin-bottom: 10px;
+    gap:20px
+}
+
+.form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 20px
+}
+.form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+}
+
+.btn{
+    margin: 0 auto;
+    padding: 10px 30px;
+    color:white;
+    background-color: blue;
+    border-radius: 20px;
+    display: flex;
+    align-items: center
+}
+
+.hasil{
+    font-size: 12px;
+    font-weight: bold
+}
