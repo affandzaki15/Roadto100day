@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+main {
+    width: 300px;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
