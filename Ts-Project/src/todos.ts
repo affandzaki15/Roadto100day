@@ -38,3 +38,13 @@ export function filterTodos(status: "all" | "active" | "completed"): Todo[] {
     return todos;
   }
 }
+
+
+export function editTodos(id: number, newTitle: string, newPriority: Priority): void {
+  const todo = todos.find(item => item.id === id);
+
+  if(!todo) return
+
+  todo.title = newTitle;
+  todo.priority = newPriority
+}

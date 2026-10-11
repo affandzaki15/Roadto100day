@@ -35,4 +35,11 @@ export function filterTodos(status) {
         return todos;
     }
 }
+export function editTodos(id, newTitle, newPriority) {
+    const todo = todos.find(item => item.id === id);
+    if (!todo)
+        return;
+    todo.title = newTitle;
+    todo.priority = newPriority;
+}
 //# sourceMappingURL=todos.js.map
