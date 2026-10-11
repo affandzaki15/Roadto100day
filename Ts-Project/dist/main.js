@@ -141,4 +141,6 @@ function updateStats() {
 searchTask?.addEventListener("input", () => {
     renderTodos();
 });
+renderTodos();
+updateStats();
 //# sourceMappingURL=main.js.map

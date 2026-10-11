@@ -171,3 +171,6 @@ function updateStats(): void {
 searchTask?.addEventListener("input", () => {
   renderTodos();
 });
+
+renderTodos();
+updateStats();
